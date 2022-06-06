@@ -1,0 +1,30 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeU1EUXlNVEUwTURZek1Gb1hEVE15TURReE9ERTBNRFl6TUZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS1grCnQwNG0vL1pHTFhCVHlsdWZCQnZ1OGJOaVJsTm4xbmNMd1RTWEpBaXIxSnVxRnNZRDdvTlhKN0ErN3JDZnlRK2MKZmRRVWhDQzBPRUVXcGE2dGl3SUxLWElzZVlhbVFnNWovUWVDZXV6dTBZOFJZMURtV1RUQ3hXZmNpbUJqcjJEbAp6TktRb1FuNVhGZ3p0ZTlPczVoK0U4UWtHQ3lROFNwWEM3YXUvU2RZa1VIUXhhclBFaHd1Ky9FWW9jQ09GeUdMCkRKbFZFaG5XTllTUy96MTJIMCszTUNUWitIY0N3a0NlYnVGWFdPWnh0eEtrUjFXalZxYkpXQ3pZUmt3ZVB3Y1IKeXIwaUwrSlZVOXRKMStxcVlrYTBkMnRVYUorT0kzQzh1WmxQcUs2ZGNvMHBZWlZ4UVZST2hyTmN0a2dCekpCVQpsc2hTTkJ1cGRqeWRqUk02N0Q4Q0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZPYS9aUjFGWm90SFRjT3hYVlVEaHlWTjBrWkRNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFDYUp2Q0Y4WmpxSGdrYVFkV1p1K003VXVnUW1pdm5KZnozMURIM0dTUFp3RldYdDZVNgpDblAvUWlpTXFxanlCSXJDOWhMMm4vdkFjcDRMcnpJUEcxb3YvZ0pUWWtIMWZoYTgwYThSYUNLcmNvWmZRdW5HCmFXM3R4K0haQUZUbzZwTnhiYzRtSW54RXZ2dzZBSUliWW0vWURzZ1J4QlVKYzhUbmZtRmp6V29hODl3TkpRT20KRmlrV1JUc0NLd1QzT2VLcVJndHNkMGVvM05CVmsrb3dFaVI5blQxeTFKdnBQTDY2Y1JXZUUwd1VQTDAvcmtELwpOdHlObmJ6OTBWdGN1WVJINlVjUkFUeGZvM1ZFK0ovK2drWWJzYVVIZVV4bThoNzFaSEJBVWwzRklFZ2hMajZmClFxNGtsRkJGSnZha1ZDQjNOZ0tZeGF2WHBBaWtneVhWUjh0WQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://A20C3654B00EE7A8522D6C6A3F4F7272.gr7.us-east-1.eks.amazonaws.com
+  name: arn:aws:eks:us-east-1:142904692278:cluster/test-cluster
+contexts:
+- context:
+    cluster: arn:aws:eks:us-east-1:142904692278:cluster/test-cluster
+    user: arn:aws:eks:us-east-1:142904692278:cluster/test-cluster
+  name: arn:aws:eks:us-east-1:142904692278:cluster/test-cluster
+current-context: ""
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:us-east-1:142904692278:cluster/test-cluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - --region
+      - us-east-1
+      - eks
+      - get-token
+      - --cluster-name
+      - test-cluster
+      command: aws
+      env: null
+      interactiveMode: IfAvailable
+      provideClusterInfo: false

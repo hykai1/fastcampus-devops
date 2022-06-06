@@ -1,0 +1,9 @@
+
+### kubectl version issue : 1.24.0/1.24.1 update bug issue
+### error message : 
+### $kubectl version
+### error: exec plugin: invalid apiVersion "client.authentication.k8s.io/v1alpha1"`
+
+curl -LO "https://dl.k8s.io/release/v1.23.6/bin/darwin/arm64/kubectl"
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/
